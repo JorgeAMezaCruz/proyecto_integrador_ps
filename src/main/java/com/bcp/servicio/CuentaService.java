@@ -9,5 +9,6 @@ public interface CuentaService {
 
 	public abstract List<Cuenta>  listaCuentaPorCliente(int idCliente);
 	public abstract Cuenta listaCuentaPorNumero(String numero);
+	public abstract Cuenta registraActualizaCliente(Cuenta obj);
 	
 }

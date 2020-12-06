@@ -16,4 +16,6 @@ public interface CuentaRepository  extends JpaRepository<Cuenta, Integer>{
 	
 	@Query("select p from Cuenta p where p.numero = :param")
 	public abstract Cuenta listaCuentaPorNumero(@Param("param")String numero);
+	
+	
 }

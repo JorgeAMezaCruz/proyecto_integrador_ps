@@ -1,9 +1,15 @@
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<link href="css/navbar.css" type="text/css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
 <div class="container">
- <div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+  
+  <div class="navbar navbar-inverse navbar-fixed-top navbar navbar-light" id="div-nav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      <img src="images/logoBCP2.png" width="80" height="40" style="margin-top:7px" />
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -12,6 +18,7 @@
     
     <div class="collapse navbar-collapse">
     <ul class="nav navbar-nav navbar-left">
+
        	<li><a href="verIntranetHome">Home</a></li>
     </ul>
     
@@ -77,8 +84,8 @@
      	<li id="noti_Container" >
      		
      			<div id="noti_Counter"></div>   <!--SHOW NOTIFICATIONS COUNT.-->
-                <a id="noti_Button" href=""><samp class="bubble"><img src='images/notifi.png' width='24px' height='24px' /></samp></a>
-                <div id="notifications">
+                <a id="noti_Button" href=""><samp class="bubble"><img src='images/campana.png' width='35px' height='35px' /></samp></a>
+                <div id="notifications" style="margin-right: 10px">
                     <h3>Notificaciones</h3>
                    	<div style="height:640px;" > 
                    		<div id="idNotificaciones">
@@ -112,8 +119,7 @@ var contador = 0;
     		$.each(data, function(index,item){
     			contador+=1;
     			console.log(contador);
-    			$("#idNotificaciones").append("<h4>"+ item.historialnotificacion.mensaje +"</h4>");
-    			$("#idNotificaciones").append("<h4>"+ item.texto +"</h4>");
+    			$("#idNotificaciones").append("<h4>"+ item.mensaje +"</h4>");
     			$("#idNotificaciones").append("-----------------------------------------------");
     			
 

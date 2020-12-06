@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="css/noti.css"/>
 
 
-<title>Intranet BCP - Jorge Jacinto Gutarra</title>
+<title>Intranet BCP - Home</title>
 </head>
 <body>
        

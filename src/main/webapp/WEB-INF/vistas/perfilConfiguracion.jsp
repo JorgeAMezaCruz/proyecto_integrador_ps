@@ -37,10 +37,10 @@
 <body>
 
 	<jsp:include page="intranetCabecera.jsp" />
-	<div class="container" style="margin-top: 4%">
-
-
-		<h3>Datos del Cliente</h3>
+	<div class="container" style="width: 80%; margin-top: 4%">
+		<div class="container">
+			<h1><strong>Datos del Cliente</strong></h1>
+		</div>
 		<div class="col-md-23">
 			<form accept-charset="UTF-8" action="consultaCliente"
 				class="simple_form" id="defaultForm2" method="post">
@@ -162,8 +162,8 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-lg-3 control-label" for="id_act_apellido">Apellido Paterno
-											</label>
+											<label class="col-lg-3 control-label" for="id_act_apellido">Apellido
+												Paterno </label>
 											<div class="col-lg-5">
 												<input class="form-control" id="id_act_apellido"
 													name="apellido" readonly="readonly"
@@ -172,12 +172,12 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-lg-3 control-label" for="id_act_apellidoM">Apellido Materno
-												M.</label>
+											<label class="col-lg-3 control-label" for="id_act_apellidoM">Apellido
+												Materno</label>
 											<div class="col-lg-5">
 												<input class="form-control" id="id_act_apellidoM"
 													name="apellidoM" placeholder="Ingrese el apellido materno"
-													type="text" maxlength="20" readonly="readonly"/>
+													type="text" maxlength="20" readonly="readonly" />
 											</div>
 										</div>
 
@@ -202,7 +202,8 @@
 											<label class="col-lg-3 control-label" for="id_act_email">Email</label>
 											<div class="col-lg-5">
 												<input class="form-control" id="id_act_email" name="email"
-													placeholder="Ingrese email" type="email" readonly="readonly" />
+													placeholder="Ingrese email" type="email"
+													readonly="readonly" />
 											</div>
 										</div>
 
@@ -210,7 +211,8 @@
 											<label class="col-lg-3 control-label" for="id_act_celular">Celular</label>
 											<div class="col-lg-5">
 												<input class="form-control" id="id_act_celular"
-													name="celular" placeholder="Ingrese celular" type="number" />
+													name="celular" placeholder="Ingrese celular" type="number"
+													required />
 											</div>
 										</div>
 
@@ -218,7 +220,7 @@
 											<label class="col-lg-3 control-label" for="id_act_direccion">Direccion</label>
 											<div class="col-lg-5">
 												<input class="form-control" id="id_act_direccion"
-													name="direccion" placeholder="Ingrese direccion"
+													name="direccion" placeholder="Ingrese direccion" required
 													type="text" />
 											</div>
 										</div>
@@ -226,8 +228,8 @@
 										<div class="form-group">
 											<label class="col-lg-3 control-label" for="id_act_login">Usuario</label>
 											<div class="col-lg-5">
-												<input class="form-control" id="id_act_login" name="login" readonly="readonly"
-													 placeholder="Ingrese login" type="text" />
+												<input class="form-control" id="id_act_login" name="login"
+													readonly="readonly" placeholder="Ingrese login" type="text" />
 											</div>
 										</div>
 
@@ -236,7 +238,7 @@
 											<div class="col-lg-5">
 												<input class="form-control" id="id_act_password"
 													name="password" placeholder="Ingrese password"
-													type="password" />
+													type="password" required />
 											</div>
 										</div>
 

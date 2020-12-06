@@ -26,6 +26,7 @@ public class Cuenta {
 	private String numero;
 	private String tipoMoneda;
 	private double saldo;
+	private double limite_transferencia;
 
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	@ManyToOne(fetch = FetchType.LAZY)

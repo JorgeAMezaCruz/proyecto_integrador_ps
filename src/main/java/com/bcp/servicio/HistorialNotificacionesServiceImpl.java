@@ -20,7 +20,10 @@ public class HistorialNotificacionesServiceImpl implements HistorialNotificacion
 
 	@Override
 	public List<HistorialNotificaciones> listaPorCliente(int idCliente) {
+		// TODO Auto-generated method stub
 		return repository.listaPorCliente(idCliente);
 	}
+
+	
 
 }

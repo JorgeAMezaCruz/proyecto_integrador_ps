@@ -46,7 +46,7 @@ public class MensajeController {
 		
 		servicio.registraMensaje(objmensaje2);
 		
-		return "mensaje";
+		return "redirect:verMovimiento";
 	}
 	
 

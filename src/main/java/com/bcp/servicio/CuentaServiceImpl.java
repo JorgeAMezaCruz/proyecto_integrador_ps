@@ -25,4 +25,10 @@ public class CuentaServiceImpl implements CuentaService{
 		return repository.listaCuentaPorNumero(numero);
 	}
 
+	@Override
+	public Cuenta registraActualizaCliente(Cuenta obj) {
+		// TODO Auto-generated method stub
+		return repository.save(obj);
+	}
+
 }

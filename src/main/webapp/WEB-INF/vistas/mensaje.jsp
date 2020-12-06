@@ -15,21 +15,28 @@
 <link rel="stylesheet" href="css/bootstrapValidator.css"/>
 <link rel="stylesheet" href="css/noti.css"/>
 
-<title>Intranet Colegio - Jorge Jacinto Gutarra</title>
+<title>Mensaje</title>
 </head>
 <body>
 <jsp:include page="intranetCabecera.jsp" />
        
-<div class="container" style="width: 60%; margin-top: 4%">
-<h4>Tranferencia BCP</h4>
+<div class="container" style="width: 80%; margin-top: 8%">
+<h4>Transferencia BCP</h4>
               
 
-	<form action="Mensaje" id="id_form" method="post"> 
+	<form action="tranferencia" id="id_form" method="post"> 
 		
 		    
+		    <div class="form-group">
+				<label class="control-label" for="id_monto">Monto</label>
+				<input class="form-control" type="text" id="id_monto" name="monto" placeholder="Ingrese el monto">
+			</div>
+			<div class="form-group">
+			<label class="control-label" id="id_validar_monto" for="id_monto"> Puedes configurar tu limite actual de transferencia de: ${sessionScope.CuentaOrigen.limite_transferencia}</label>
+		    </div>
 			<div class="form-group">
 				<label class="control-label" for="id_texto">Mensaje</label>
-				<input class="form-control" type="text" id="id_texto" name="texto" placeholder="Ingrese el mensaje">
+				<input class="form-control" type="text" id="id_texto" name="texto" placeholder="Ingrese el mensaje opcional">
 			</div>
 			
 		
@@ -46,12 +53,44 @@
 
 </div>
   
+<script type="text/javascript">
+$('#id_form').bootstrapValidator({
+    message: 'This value is not valid',
+    feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+    },
+    fields: {
 
+        monto:{
+			selector : "#id_monto",
+			validators : {
+				notEmpty : {
+					message : "el monto  es obligatorio"
+				},
+				regexp :{
+					regexp: /^(([0-9]*)|([0-9]*[\.][0-9]))$/ ,
+                    message: 'El monto es entero o decimal con un dígito'
+				},
+				remote :{
+            	    delay: 1000,
+            	 	url: 'buscaLimite',
+            	 	message: 'Excede al limite de transferencia'
+             }
+				
+				
+				
+			}	
+        }
 
-<div class="container" >
- <div class="col-md-12" align="center"> 
+       
+    	
+    }
 
- </div>
-</div>    		
+       
+});
+</script>
+	
 </body>
 </html>

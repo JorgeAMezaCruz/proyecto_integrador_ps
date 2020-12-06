@@ -32,8 +32,8 @@ public class ConfiguracionNotificacion {
 	
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idTarjeta")
-	private Tarjeta tarjeta;
+	@JoinColumn(name = "idCliente")
+	private Cliente cliente;
 	
 	private String estado;
 }
